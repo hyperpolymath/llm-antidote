@@ -12,10 +12,10 @@
 ;;;============================================================================
 
 (define metadata
-  '((version . "0.1.0")
+  '((version . "0.1.1")
     (schema-version . "1.0")
     (created . "2025-12-15")
-    (updated . "2025-12-15")
+    (updated . "2025-12-17")
     (project . "llm-antidote")
     (repo . "github.com/hyperpolymath/llm-antidote")))
 
@@ -41,34 +41,44 @@
 
 (define current-position
   '((phase . "v0.1 - Initial Setup and RSR Compliance")
-    (overall-completion . 25)
+    (overall-completion . 40)
 
     (components
      ((rsr-compliance
        ((status . "complete")
         (completion . 100)
-        (notes . "SHA-pinned actions, SPDX headers, multi-platform CI")))
+        (notes . "SHA-pinned actions, SPDX headers, multi-platform CI, permissions declared")))
+
+      (security
+       ((status . "complete")
+        (completion . 100)
+        (notes . "All workflows secured: SPDX headers, permissions: read-all, SHA-pinned actions")))
 
       (documentation
        ((status . "foundation")
-        (completion . 30)
-        (notes . "README exists, META/ECOSYSTEM/STATE.scm added")))
+        (completion . 35)
+        (notes . "README, META/ECOSYSTEM/STATE.scm, SECURITY.md comprehensive")))
 
       (testing
        ((status . "minimal")
         (completion . 10)
-        (notes . "CI/CD scaffolding exists, limited test coverage")))
+        (notes . "CI/CD scaffolding exists, Python test suite needs Rust/ReScript migration")))
 
       (core-functionality
        ((status . "in-progress")
-        (completion . 25)
-        (notes . "Initial implementation underway")))))
+        (completion . 50)
+        (notes . "Reset artifacts complete, verification tools present, Python migration pending")))))
 
     (working-features
      ("RSR-compliant CI/CD pipeline"
       "Multi-platform mirroring (GitHub, GitLab, Bitbucket)"
       "SPDX license headers on all files"
-      "SHA-pinned GitHub Actions"))))
+      "SHA-pinned GitHub Actions (all workflows)"
+      "Universal semantic reset artifact"
+      "Model-specific reset artifacts (Claude, GPT, Gemini)"
+      "Specialized reset artifacts (coding, conversation)"
+      "Context preservation artifact"
+      "Reset verification tool"))))
 
 ;;;============================================================================
 ;;; ROUTE TO MVP
@@ -151,6 +161,16 @@
 
 (define session-history
   '((snapshots
+     ((date . "2025-12-17")
+      (session . "security-review-and-fixes")
+      (accomplishments
+       ("Fixed all GitHub workflows with SPDX headers"
+        "Added permissions: read-all to all workflows"
+        "SHA-pinned all GitHub Actions in 14 workflow files"
+        "Added SPDX headers to all SCM artifact files"
+        "Reviewed and verified Guile Scheme syntax"
+        "Updated STATE.scm with current project status"))
+      (notes . "Comprehensive security hardening session"))
      ((date . "2025-12-15")
       (session . "initial-state-creation")
       (accomplishments
@@ -184,11 +204,11 @@
 
 (define state-summary
   '((project . "llm-antidote")
-    (version . "0.1.0")
-    (overall-completion . 25)
+    (version . "0.1.1")
+    (overall-completion . 40)
     (next-milestone . "v0.2 - Core Functionality")
     (critical-blockers . 0)
     (high-priority-issues . 0)
-    (updated . "2025-12-15")))
+    (updated . "2025-12-17")))
 
 ;;; End of STATE.scm
